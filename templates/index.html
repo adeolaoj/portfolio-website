@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adeola Ojuade's Portfolio</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-highlight">Adeola</span><span class="logo-light"> Ojuade</span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#about-me" class="nav-link">About Me</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Skills</a>
+        </nav>
+        <a href="#contact" class="contact-btn">Contact Me</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="intro-text">
+                <h1>Hello! 👋 My name is <span>Adeola Ojuade</span></h1>
+                <p><span>I am <span id="typed-text"></span></span>
+                    <br> I'm passionate about developing user-centered products to create impact. My biggest interests are AI, web development, and building fun projects!
+                </p>
+                <a href="#about-me" class="about-btn">About Me</a>
+
+            </div>
+
+            <div class="headshot">
+                <img src="{{ url_for('static', filename='images/headshot.JPG') }}" alt="Adeola Ojuade's headshot">
+            </div>
+
+        </div>
+
+        <a href="#about-me" class="scroll-down">&#8595;</a>
+
+    </section>
+
+    <section id="about-me" class="about-me-section">
+
+        <div data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" class="about-me-content">
+            <h2 class="about-me-title">Learn a little bit about me!</h2>
+            
+            <div class="browser-window">
+                <div class="browser-header">
+                    <div class="window-buttons">
+                    <span class="btn close"></span>
+                    <span class="btn minimize"></span>
+                    <span class="btn maximize"></span>
+                    </div>
+                    <div class="browser-tabs">
+                    <div class="tab active" data-tab="professional">📁 Experience Rundown</div>
+                    <div class="tab" data-tab="fun">🎉 Some Fun Facts</div>
+                    </div>
+                </div>
+
+                <div class="tab-content active" id="professional">
+                    <h2>Experience Rundown</h2>
+                    <p>📚 I'm a Computer Science student at Johns Hopkins University.</p>
+                    <p>💼 Interned at fun company as an IT Intern</p>
+                    <p>🛠️ Skills: Python, C++, Java, HTML/CSS</p>
+                </div>
+
+                <div class="tab-content" id="fun">
+                    <h2>Fun Facts</h2>
+                    <p>💚 I'm passionate about sustainability!</p>
+                    <p>🌎 My life goal is to be a polyglot and learn 10 languages </p>
+                    <p>🍬 I am unfortunately a chocolate hater (🤢)</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <a href="https://docs.google.com/presentation/d/11KKAXM5L04kOE2XBYE041oq7oShuxnIf9zxGCJWzOhw/edit?usp=sharing" target="_blank" class="project-card">
+                <img src="{{ url_for('static', filename='images/safe_plate_thumb.png') }}" alt="Project 1 Thumbnail">
+                <h3>A Case Study and Remake of Food Delivery Apps</h3>
+                <p>A look into how I developed a more inclusive food delivery app for people with dietary restrictions and allergies.</p>
+            </a>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/safe_plate_thumb.png') }}" alt="Project 2 Thumbnail">
+                <h3>Project Title 2</h3>
+                <p>OMG IT WORKS HAHAHAHAHAHAH I'M A GENIUS</p>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/safe_plate_thumb.png') }}" alt="Project 3 Thumbnail">
+                <h3>Project Title 3</h3>
+                <p>I'M A GENIUS PT 2</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-preview">
+        <div class="code-container">
+            <pre><code id="animated-code"></code></pre>
+        </div>
+    </section>
+
+    <!-- Chat toggle button -->
+    <div id="chat-toggle" onclick="toggleChat()">💬</div>
+
+    <!-- Chat widget -->
+    <div id="chat-widget" style="display: none;">
+        <div id="chatbox">
+            <div id="messages" class="chat-scroll"></div>
+            <div id="inputArea">
+                <input type="text" id="userInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()" />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    </body>
+</html>
