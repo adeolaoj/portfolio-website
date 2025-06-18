@@ -9,6 +9,8 @@ from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 import pickle
 
+nltk.download('punkt_tab')
+
 
 ps = PorterStemmer()
 
