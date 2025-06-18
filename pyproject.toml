@@ -1,5 +1,0 @@
-[project]
-name = "chatbot"
-version = "0.1.0"
-description = "Portfolio Website with Chatbot"
-requires-python = ">=3.11,<3.12"
