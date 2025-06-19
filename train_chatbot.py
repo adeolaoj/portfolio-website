@@ -7,7 +7,11 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 import pickle
-nltk.data.path.append('./punkt')
+import os
+
+# Ensure nltk looks in your local folder
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
 
 
 
