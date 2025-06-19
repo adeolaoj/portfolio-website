@@ -1,6 +1,8 @@
 import json
 import numpy as np
 import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 import tensorflow as tf
@@ -8,11 +10,6 @@ from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 import pickle
 import os
-
-# Ensure nltk looks in your local folder
-nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
-nltk.data.path.append(nltk_data_path)
-
 
 
 ps = PorterStemmer()
