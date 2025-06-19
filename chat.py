@@ -1,5 +1,7 @@
 import tensorflow as tf
 import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
 import numpy as np
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
