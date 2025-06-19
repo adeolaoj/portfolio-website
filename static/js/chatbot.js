@@ -28,7 +28,7 @@ async function sendMessage() {
         });
 
     } catch (err) {
-        msgBox.innerHTML += '<div class="bot-msg"><strong>Bot:</strong> Sorry, looks like something went wrong. But you can always access an offline version of this chatbot at github.com/adeolaoj/portfolio-chatbot</div>';
+        msgBox.innerHTML += '<div class="bot-msg"><strong>Bot:</strong> Sorry, looks like something went wrong. But you can always access an offline version of this chatbot at github.com/adeolaoj/portfolio-chatbot!</div>';
         console.error(err);
     }
 

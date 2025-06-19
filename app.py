@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import tensorflow as tf
 import numpy as np
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 import pickle
