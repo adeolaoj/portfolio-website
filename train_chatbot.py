@@ -7,7 +7,6 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 import pickle
-nltk.download('punkt')
 
 import os
 
