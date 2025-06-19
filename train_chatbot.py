@@ -3,11 +3,12 @@ import numpy as np
 import nltk
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
-nltk.download()
 import tensorflow as tf
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 import pickle
+nltk.download()
+nltk.download('punkt')
 
 
 ps = PorterStemmer()
